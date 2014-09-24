@@ -20,6 +20,7 @@ Router.map(function() {
     this.resource('posts', function() {
         this.route('new')
     });
+  this.route('posts/new');
 });
 
 export

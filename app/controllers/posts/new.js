@@ -10,8 +10,8 @@ export default Ember.ObjectController.extend({
 
   actions: {
     save: function() {
-      _this = this;
-      post = this.store.createRecord('post',  {
+      var _this = this;
+      var post = this.store.createRecord('post',  {
 
         title: this.get('title'),
         content: this.get('body'),
