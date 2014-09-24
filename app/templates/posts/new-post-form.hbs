@@ -1,0 +1,32 @@
+<form {{action "save" on='submit' }} id = 'new_post_form' >
+      <p>
+        <b>Title:</b>
+        <br>{{input value=title required=true id = 'new_post_title'}}</p>
+      <p>
+        <b>Excerpt: </b> 
+        <br>{{textarea value=excerpt rows='5' cols='100' classNames = "wide" required = true}}</p>
+      <p>
+        <b>Content: </b> 
+        <br>{{textarea value=body rows='5' cols='100' classNames = "wide" required = true}}</p>
+      <p>
+      <p>
+        <b>ImageURL: </b> 
+        <br>{{input value=image_url classNames = "wide" required = true}}</p>
+      <p>      
+        <b>User: </b> 
+        <br>
+        {{view Ember.Select viewName="select"
+                            content= users
+                            optionLabelPath="content.name"
+                            optionValuePath="content.id"
+                            selectionBinding="selectedUser"
+                            prompt = "Please select a user"
+                            required = true
+                            }}        
+      </p>        
+      <p>
+        <button type = 'submit'>Save</button>
+
+        <button {{action cancel}}>Cancel</button>
+      </p>
+      </form>

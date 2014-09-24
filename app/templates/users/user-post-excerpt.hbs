@@ -1,0 +1,12 @@
+      <div>
+        <h4><b>Posts({{posts.length}}):</b> </h4>
+        <div>
+        {{#if posts.length}}
+          {{#each post in posts}}
+            {{post-excerpt post=post }}
+          {{/each}}
+        {{else}}
+          No posts... and Lets create a few {{#link-to 'posts.new'}}here{{/link-to}}
+        {{/if}}
+        </div>
+      </div>

@@ -1,19 +1,26 @@
 import Ember from 'ember';
+import config from './config/environment';
 
 var Router = Ember.Router.extend({
-  location: MyNewAppENV.locationType
+    location: config.locationType
 });
 
 Router.map(function() {
 
-  this.resource('users', function() {
-    // this.resource('user', {
-    //   path: ':user_id'
-    // })
-    // this.route('new')
-    // this.route('search')
-  });
-  
+    this.resource('users', function() {
+        this.route('show', {
+            path: ':user_id'
+        });
+        // this.route('new')
+        // this.route('search')
+    });
+
+
+
+    this.resource('posts', function() {
+        this.route('new')
+    });
 });
 
-export default Router;
+export
+default Router;

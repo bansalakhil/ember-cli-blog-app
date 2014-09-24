@@ -1,0 +1,10 @@
+{{outlet}}
+<div>
+  {{#if length }}
+  {{#each }}
+  {{post-details post=this}}
+  {{/each}}
+  {{else}}
+  No Posts Yet... Lets create a few {{#link-to 'posts.new'}}here{{/link-to}}
+  {{/if}}
+</div>

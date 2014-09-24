@@ -1,0 +1,29 @@
+<div>
+  <div style='float:right'>
+    <p>
+    <button {{action deleteRecord}}>Delete</button>
+    </p>
+  </div>
+  {{#if isEditing }}
+  <p>{{input value=name action='doneEditing'}}</p>
+  <p>{{textarea value=bio rows='5' cols='100' classNames = "wide"}}</p>
+  <p>
+  <button {{action doneEditing}}>Save</button>
+  </p>
+  <p>
+  <button {{action cancelEditing}}>Cancel</button>
+  </p>
+  {{else}}
+  <div style='float:right'>
+    <button {{action 'edit'}}>Edit</button>
+  </div>
+  {{/if}}
+  <p><b>{{name}}</b>
+  </p>
+  <p><b>Bio:</b>
+  </p>
+  <p>{{bio}}</p>
+  <p><a {{bind-attr href='url' }} target='_blank'>{{url}}</a>
+  </p>
+  {{partial 'users/user_post_excerpt'}}
+</div>
