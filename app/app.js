@@ -6,7 +6,8 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
   modulePrefix: 'my-new-app', // TODO: loaded via config
-  Resolver: Resolver
+  Resolver: Resolver,
+  PostDefaultImageURL: 'http://lorempixel.com/1920/1920/nature/'
 });
 
 loadInitializers(App, 'my-new-app');

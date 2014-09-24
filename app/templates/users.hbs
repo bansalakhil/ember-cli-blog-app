@@ -1,0 +1,14 @@
+<div>
+  <div style="width: 20%; float:left;">
+    <ol>
+      {{#each}}
+      <li>
+        {{#link-to 'user' this}}{{name}}{{/link-to}} ({{posts.length}})
+      </li>
+      {{/each}}   
+   </ol>
+  </div>
+  <div style="width: 50%; float:left;">
+    {{outlet}}
+  </div>
+</div>

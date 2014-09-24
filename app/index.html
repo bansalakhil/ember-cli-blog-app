@@ -9,18 +9,38 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/my-new-app.css">
+    <link rel="stylesheet" href="./assets/vendor.css">
+    <link rel="stylesheet" href="./assets/my-new-app.css">
+    <link rel="stylesheet" href="./assets/notification.css">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./assets/image_loader.css">
+    <link rel="stylesheet" href="./assets/bootstrap-combined.no-icons.min.css">
+
   </head>
   <body>
     <script>
       window.MyNewAppENV = {{ENV}};
       window.EmberENV = window.MyNewAppENV.EmberENV;
     </script>
-    <script src="assets/vendor.js"></script>
-    <script src="assets/my-new-app.js"></script>
+    <script src="./assets/vendor.js"></script>
+    <script src="./assets/my-new-app.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?v=3"></script>
+
     <script>
       window.MyNewApp = require('my-new-app/app')['default'].create(MyNewAppENV.APP);
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
