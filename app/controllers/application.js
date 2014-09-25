@@ -5,7 +5,7 @@ default Ember.Controller.extend({
     /**
      * @property {Array} The array of app-wide notifications
      */
-    notifications: Em.A(),
+    notifications: Ember.A(),
 
     /**
      * @observer Not technically necessary, but cleans up
@@ -21,7 +21,7 @@ default Ember.Controller.extend({
         // If all the notifications have been closed,
         // wipe our list clean so cruft doesn't build up
         if (this.get('notifications').everyBy('closed')) {
-            this.set('notifications', Em.A());
+            this.set('notifications', Ember.A());
         }
     }.observes('notifications.@each.closed'),
 

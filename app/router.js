@@ -21,6 +21,7 @@ Router.map(function() {
         this.route('new')
     });
   this.route('posts/new');
+  this.route('users/search');
 });
 
 export

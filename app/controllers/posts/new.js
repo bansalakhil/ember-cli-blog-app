@@ -22,14 +22,14 @@ export default Ember.ObjectController.extend({
 
       post.save().then(
 
-        function(data) {
+        function() {
 
           _this.notifySuccess(post);
           _this.resetForm();
           _this.transitionToRoute('posts')
         },
 
-        function(data) {
+        function() {
           _this.notifyFailure(post);
           post.deleteRecord();
         }
