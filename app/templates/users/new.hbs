@@ -1,0 +1,14 @@
+<div>
+  <p>
+  <b>Name:</b>
+  <br>{{input value=name action='save'}}</p>
+  <p>
+  <b>Bio: </b>
+  <br>{{textarea value=bio rows='5' cols='100' classNames = "wide"}}</p>
+  <p>
+  <button {{action 'save'}}>Save</button>
+  </p>
+  <p>
+  <button {{action 'cancel'}}>Cancel</button>
+  </p>
+</div>

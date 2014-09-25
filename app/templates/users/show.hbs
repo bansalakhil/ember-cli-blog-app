@@ -1,17 +1,17 @@
 <div>
   <div style='float:right'>
     <p>
-    <button {{action deleteRecord}}>Delete</button>
+    <button {{action 'deleteRecord'}}>Delete</button>
     </p>
   </div>
   {{#if isEditing }}
   <p>{{input value=name action='doneEditing'}}</p>
   <p>{{textarea value=bio rows='5' cols='100' classNames = "wide"}}</p>
   <p>
-  <button {{action doneEditing}}>Save</button>
+  <button {{action 'doneEditing'}}>Save</button>
   </p>
   <p>
-  <button {{action cancelEditing}}>Cancel</button>
+  <button {{action 'cancelEditing'}}>Cancel</button>
   </p>
   {{else}}
   <div style='float:right'>

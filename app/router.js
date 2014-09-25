@@ -11,8 +11,8 @@ Router.map(function() {
         this.route('show', {
             path: ':user_id'
         });
-        // this.route('new')
-        // this.route('search')
+        this.route('new')
+        this.route('search')
     });
 
 
