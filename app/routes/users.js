@@ -3,10 +3,10 @@ import Ember from 'ember';
 export
 default Ember.Route.extend({
 
-  afterModel: function(users) {
-    var users = users.toArray();
+  afterModel: function(usersObjs) {
+    var users = usersObjs.toArray();
     if (users.length === 0) {
-      this.transitionTo('users.new')
+      this.transitionTo('users.new');
     }
   },
 

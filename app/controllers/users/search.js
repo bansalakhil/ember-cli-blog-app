@@ -12,15 +12,15 @@ export default Ember.ArrayController.extend({
   filteredUsers: function() {
     var query = this.get('query');
 
-    console.log("filter method called with query: " + query)
+    console.log("filter method called with query: " + query);
 
     var users = this.get('model');
 
     if (query) {
-      var regex = new RegExp(query, 'i')
+      var regex = new RegExp(query, 'i');
 
       var filteredUsers = users.filter(function(u) {
-        return regex.test(u.get('name'))
+        return regex.test(u.get('name'));
       });
       return filteredUsers;
     } else {

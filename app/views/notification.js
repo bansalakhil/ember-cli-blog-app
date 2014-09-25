@@ -31,14 +31,14 @@ default Ember.View.extend({
             this.notifyPropertyChange('style');
         }.bind(this);
         this.set('_recomputeStyle', fn);
-        $(window).bind('resize', fn);
+        Ember.$(window).bind('resize', fn);
     },
 
     /**
      * Lifecycle hook - called right before view is destroyed
      */
     willDestroyElement: function() {
-        $(window).unbind('resize', this.get('_recomputeStyle'));
+        Ember.$(window).unbind('resize', this.get('_recomputeStyle'));
     },
 
     /**
@@ -75,7 +75,7 @@ default Ember.View.extend({
         // Get all open notifications
         var notifications = this.get('controller.notifications').rejectBy('closed'),
             index = notifications.indexOf(this.get('content')), // content is the notification object
-            viewportHeight = $(window).height(),
+            viewportHeight = Ember.$(window).height(),
             unitHeight = 80,
             unitWidth = 320,
             unitsPerColumn = Math.floor(viewportHeight / unitHeight),

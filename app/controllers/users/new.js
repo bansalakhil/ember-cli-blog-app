@@ -14,15 +14,15 @@ default Ember.ObjectController.extend({
             });
 
             user.save().then(
-                function(data) {
+                function() {
 
                     _this.notifySuccess(user);
 
                     _this.resetForm();
-                    _this.transitionToRoute('users.show', user)
+                    _this.transitionToRoute('users.show', user);
                 },
 
-                function(data) {
+                function() {
                     _this.notifyFailure(user);
                     user.deleteRecord();
                     // alert('Could not save record')
@@ -31,7 +31,7 @@ default Ember.ObjectController.extend({
 
         },
         cancel: function() {
-            this.transitionToRoute('users')
+            this.transitionToRoute('users');
         },
     },
     notifySuccess: function(user) {

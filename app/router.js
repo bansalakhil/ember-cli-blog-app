@@ -11,14 +11,14 @@ Router.map(function() {
         this.route('show', {
             path: ':user_id'
         });
-        this.route('new')
-        this.route('search')
+        this.route('new');
+        this.route('search');
     });
 
 
 
     this.resource('posts', function() {
-        this.route('new')
+        this.route('new');
     });
   this.route('posts/new');
   this.route('users/search');

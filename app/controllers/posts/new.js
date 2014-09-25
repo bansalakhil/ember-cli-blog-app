@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   needs: ['application'],
-  image_url: MyNewApp.PostDefaultImageURL +  Math.floor((Math.random() * 10) + 1),
+  // debugger
+  image_url: window.MyNewApp.PostDefaultImageURL +  Math.floor((Math.random() * 10) + 1),
   isEditing: false,
   selectedUser: null,
   // needs: ["users"],
@@ -26,7 +27,7 @@ export default Ember.ObjectController.extend({
 
           _this.notifySuccess(post);
           _this.resetForm();
-          _this.transitionToRoute('posts')
+          _this.transitionToRoute('posts');
         },
 
         function() {
