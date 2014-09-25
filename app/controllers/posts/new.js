@@ -43,6 +43,7 @@ export default Ember.ObjectController.extend({
     },
   },
   notifySuccess: function(post) {
+    // debugger
     console.log(this.get('controllers.application').send('pushNotification', 'success', 'Saved Successfully!!', 'Post ' + post.get('title') + ' saved on server successfully.'));
   },
   notifyFailure: function(post) {
